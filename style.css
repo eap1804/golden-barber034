@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    background-color: #000000;
+}
+
+/* HEADER */
+.header {
+    background: #000000;
+    padding: 15px 40px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.logo {
+    color: #f2f2fa;
+}
+
+.logo img{
+width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: #F0D999;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+/* SOCIAL ICONS COM IMG */
+.social-icons {
+    display: flex;
+    gap: 12px; /* distância entre os ícones */
+}
+
+.social-icons a {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.social-icons img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+/* HERO */
+.hero {
+    background: url("image/salao.png") center/cover no-repeat;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+}
+
+.hero-content span {
+    font-size: 18px;
+    letter-spacing: 4px;
+}
+
+.hero-content h2 {
+    font-size: 64px;
+}
+
+/* HISTÓRIA */
+.historia {
+    background: #f2f2fa;
+    padding: 80px 40px;
+}
+
+.historia-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+}
+
+.historia img {
+    width: 45%;
+}
+
+.historia-texto h2 {
+    color: #DAA520;
+    margin-bottom: 20px;
+}
+
+/* SERVIÇOS */
+.servicos {
+    background: #DAA520;
+    padding: 80px 40px;
+    color: white;
+    text-align: center;
+}
+
+.lista-servicos {
+    max-width: 600px;
+    margin: 40px auto;
+    list-style: none;
+}
+
+.lista-servicos li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+/* GALERIA */
+.galeria {
+    background: #f2f2fa;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.galeria h2 {
+    color: #b57b4c;
+    margin-bottom: 40px;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.galeria-grid img {
+    width: 100%;
+}
+
+/* ENDEREÇO */
+.endereco {
+    background: #DAA520;
+    padding: 80px 40px;
+    text-align: center;
+    color: white;
+}
+
+.form-endereco {
+    max-width: 600px;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+    .menu {
+        display: none;
+    }
+
+    /* HERO */
+    .hero {
+        height: 70vh;
+    }
+
+    .hero-content h2 {
+        font-size: 36px;
+    }
+
+    /* HISTÓRIA */
+    .historia-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .historia img {
+        width: 100%;
+    }
+
+    /* SERVIÇOS */
+    .lista-servicos {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    /* GALERIA */
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* CONTATO */
+    .form-contato .linha {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero-content h2 {
+        font-size: 28px;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* MAPA ENDEREÇO */
+.mapa-endereco {
+    margin-top: 40px;
+}
+
+.mapa-endereco iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 8px;
+}
+
+.btn-mapa {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #2b1a12;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-mapa:hover {
+    background: #1a100a;
+}
+
+/* WHATSAPP FIXO */
+.whatsapp-fixo {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #25D366;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 999;
+}
+
+.whatsapp-fixo img {
+    width: 22px;
+    height: 22px;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .whatsapp-fixo span {
+        display: none;
+    }
+
+    .whatsapp-fixo {
+        padding: 14px;
+        border-radius: 50%;
+    }
+}
